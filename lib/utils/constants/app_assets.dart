@@ -9,4 +9,15 @@ class AppAssets {
   ];
 
   static const handGestureRive = 'assets/rive/hand_cricket.riv';
+
+  static const backgroundImage = 'assets/images/background.png';
+
+  static const ball = 'assets/images/ball.png';
+
+  //game overlays
+  static const out = 'assets/images/out.png';
+  static const six = 'assets/images/sixer.png';
+  static const win = 'assets/images/you_won.png';
+  static const batting = 'assets/images/batting.png';
+  static const bowling = 'assets/images/game_defend.webp';
 }
