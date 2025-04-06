@@ -15,7 +15,7 @@ class GameNotifier extends ChangeNotifier {
   HandGestures playerTwoGesture = HandGestures.none;
 
   int numberOfBalls = 0;
-
+  bool gameEnded = false;
   List<int> runsThisOver = [];
 
   int get numberOfRuns => runsThisOver.fold(0, (sum, run) => sum + run);
@@ -53,10 +53,14 @@ class GameNotifier extends ChangeNotifier {
 
       notifyListeners();
     }
-    resetTimer = true;
-    pauseTimer = false;
-    startTimer();
-    blockInput = false;
+    if (!gameEnded) {
+      resetTimer = true;
+      pauseTimer = false;
+      startTimer();
+      blockInput = false;
+    } else {
+      blockInput = true;
+    }
   }
 
   Future<void> pauseForEachBallAndResetAnimation() async {
@@ -121,6 +125,7 @@ class GameNotifier extends ChangeNotifier {
   }
 
   void endGameWithResult() {
+    gameEnded = true;
     pauseTimer = true;
     if (numberOfRuns >= targetScore!) {
       overlay = GameOverlay.lose;
@@ -173,6 +178,7 @@ class GameNotifier extends ChangeNotifier {
 
   void restartGame() {
     blockInput = true;
+    gameEnded = false;
     playerInning = PlayerInning.batting;
     playerOneGesture = HandGestures.none;
     playerTwoGesture = HandGestures.none;
