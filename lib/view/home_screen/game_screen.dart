@@ -5,7 +5,6 @@ import 'package:hand_cricket/view/home_screen/widgets/buttons_to_play.dart';
 import 'package:hand_cricket/view/home_screen/widgets/other_overlay_screen.dart';
 import 'package:hand_cricket/view/home_screen/widgets/move_timer.dart';
 import 'package:hand_cricket/view/home_screen/widgets/playbox.dart';
-import 'package:hand_cricket/view/home_screen/widgets/result_screens/win_screen.dart';
 import 'package:hand_cricket/view/home_screen/widgets/scorecard/scorecard.dart';
 import 'package:provider/provider.dart';
 
