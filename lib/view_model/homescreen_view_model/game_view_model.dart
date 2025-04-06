@@ -3,7 +3,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:hand_cricket/utils/enum/game_overlay_enum.dart';
 import 'package:hand_cricket/view/shared/hand_gesture_enum.dart';
-import 'package:hand_cricket/view/shared/run_button_enum.dart';
+import 'package:hand_cricket/utils/enum/run_button_enum.dart';
 
 class GameNotifier extends ChangeNotifier {
   GameOverlay overlay = GameOverlay.none;

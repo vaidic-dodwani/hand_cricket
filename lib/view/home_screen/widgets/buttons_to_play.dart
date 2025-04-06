@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hand_cricket/view/shared/run_button_enum.dart';
+import 'package:hand_cricket/utils/enum/run_button_enum.dart';
 import 'package:provider/provider.dart';
 import '../../../view_model/homescreen_view_model/game_view_model.dart';
 
